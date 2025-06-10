@@ -9,6 +9,8 @@
     padding: 1.75rem 1rem;
 
     position: relative;
+    
+    transition: .5s ease;
 
     & input{
         position: absolute;
@@ -17,5 +19,36 @@
         inset: 0;
         opacity: 0;
     }
+
+    & svg path{
+        transition: .5s ease;
+    }
+
+    & img{
+        width: 3rem;
+  
+    }
+
+    & p{
+        color: var(--text-drop);
+    }
+
+    &:hover, &:has(:focus){
+        border-width: 2px;
+        border-color: var(--stroke-highlight);
+        background-color: var(--surface-secondary);
+        border-radius: .25rem;
+
+        & p{
+            color: var(--text-tertiary);
+        }
+
+        & svg path{
+            stroke: var(--stroke-highlight);
+        }
+       
+        
+    }
+
 
 }
